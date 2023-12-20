@@ -1,12 +1,14 @@
 import './Header.css';
 import { Box, Typography } from "@mui/material";
 import background from '../assets/trago-amargo1.jpg';
+import { NavBar } from './NavBar';
 
 
 export const Header = () => {
     return (
         <>
             <Box position="relative">
+                <NavBar />
                 <Typography 
                     variant='h1' 
                     sx={{ 
