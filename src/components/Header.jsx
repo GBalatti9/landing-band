@@ -16,7 +16,7 @@ export const Header = () => {
                         textAlign: 'center',
                         position: 'absolute', 
                         color: 'yellow', 
-                        fontSize: '4rem', 
+                        fontSize: '6rem', 
                         top: '50%',
                         left: '50%',
                         transform: 'translate(-50%, -50%)',

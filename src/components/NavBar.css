@@ -18,6 +18,7 @@
     height: 100vh;
     right: -100%;
     transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .menu-mobile.active {
@@ -27,7 +28,7 @@
 }
 
 .button-menu {
-    position: absolute;
+    position: fixed;
     margin: 10px;
     top: 0;
     right: 0;
