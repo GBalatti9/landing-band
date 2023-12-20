@@ -4,6 +4,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 export const NavBar = () => {
+
     const [open, setOpen] = useState(false);
 
     const handleMenuMobile = () => {
