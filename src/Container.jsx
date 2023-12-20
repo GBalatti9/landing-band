@@ -1,7 +1,10 @@
+import { Header } from "./components/Header"
 
 
 export const Container = () => {
     return (
-        <div>Container</div>
+        <>
+            <Header />
+        </>
     )
 }
