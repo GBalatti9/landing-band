@@ -19,8 +19,12 @@ export const NavBar = () => {
                     className='button-menu'
                 />
             </div>
-            <div className={`menu-mobile ${open ? 'active' : ''}`}>
-                {/* Contenido del menú móvil */}
+            <div className={`menu-mobile ${open ? 'active' : 'md-lg'}`}>
+                <ul className='list-menu-mobile'>
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Contact</li>
+                </ul>
                 <ul className='list-menu'>
                     <li>Home</li>
                     <li>About us</li>

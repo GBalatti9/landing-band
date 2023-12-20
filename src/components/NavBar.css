@@ -23,6 +23,7 @@
 .menu-mobile.active {
     transform: translateX(-100%);
     opacity: 0.9;
+    z-index: 1;
 }
 
 .button-menu {
@@ -33,6 +34,19 @@
     color: white;
     z-index: 2;
     font-size: 2rem;
+}
+
+.list-menu-mobile {
+    color: white;
+    height: 60%;
+    margin: 125px auto;
+    font-family: roboto;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 3rem;
+    align-items: center;
 }
 
 @media screen and (min-width: 480px) {
