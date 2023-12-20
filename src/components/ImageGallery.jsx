@@ -1,6 +1,7 @@
-import { ImageList, ImageListItem } from '@mui/material';
+import { Dialog, DialogContent, DialogTitle, ImageList, ImageListItem } from '@mui/material';
 import { itemData } from './Images';
 import './ImageGallery.css';
+import { useState } from 'react';
 
 const srcset = (image, size, rows = 1, cols = 1) => {
     return {
@@ -11,11 +12,23 @@ const srcset = (image, size, rows = 1, cols = 1) => {
 
 export const ImageGallery = () => {
 
+    const [openDialog, setOpenDialog] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const handleCloseDialog = () => {
+        setOpenDialog(false);
+    };
+
+    const handleImageClick = (image) => {
+        setSelectedImage(image);
+        setOpenDialog(true);
+    };
+
     return (
         <div className='image-gallery-component-gallery'>
 
             <ImageList
-                sx={{ width: 500, height: 450 }}
+                className='image-list'
                 variant="quilted"
                 cols={4}
                 rowHeight={121}
@@ -23,6 +36,7 @@ export const ImageGallery = () => {
                 {itemData.map((item) => (
                     <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
                         <img
+                            onClick={() => handleImageClick( item.img )}
                             {...srcset(item.img, 121, item.rows, item.cols)}
                             alt={item.title}
                             loading="lazy"
@@ -30,6 +44,20 @@ export const ImageGallery = () => {
                     </ImageListItem>
                 ))}
             </ImageList>
+
+            <Dialog open={ openDialog } onClose={ handleCloseDialog } >
+                <DialogTitle>  </DialogTitle>
+                <DialogContent className='dialog'>
+                    {
+                        selectedImage && (
+                            <img
+                                src={selectedImage}
+                                alt='alt'
+                                />
+                        )
+                    }
+                </DialogContent>
+            </Dialog>
         </div>
     )
 }

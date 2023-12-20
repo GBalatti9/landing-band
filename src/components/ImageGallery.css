@@ -1,5 +1,17 @@
 .image-gallery-component-gallery{
     display: grid;
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     background-color: black;
+}
+
+.image-list{
+    width: 90%;
+    margin: auto;
+    height: 80%;
+}
+
+.dialog {
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
 }
