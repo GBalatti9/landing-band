@@ -12,7 +12,7 @@ export const NavBar = () => {
 
     return (
         <>
-            <div className='bg-white'>
+            <div>
                 <FontAwesomeIcon
                     icon={open ? faTimes : faBars}
                     onClick={handleMenuMobile}
@@ -25,12 +25,12 @@ export const NavBar = () => {
                     <li>About us</li>
                     <li>Contact</li>
                 </ul>
-                <ul className='list-menu'>
+            </div>
+            <ul className='list-menu'>
                     <li>Home</li>
                     <li>About us</li>
                     <li>Contact</li>
                 </ul>
-            </div>
         </>
     );
 };
