@@ -5,6 +5,7 @@ import trago3 from '../assets/IGh159.jpg';
 import trago4 from '../assets/IGh219.jpg';
 import trago5 from '../assets/IGv07.jpg';
 import trago6 from '../assets/IGv76.jpg';
+import trago7 from '../assets/IMG_0218.jpg';
 
 export const arrayImages = [trago, trago1, trago2, trago3, trago4, trago5, trago6];
 
@@ -12,7 +13,6 @@ export const itemData = [
     {
         img: trago,
         title: 'Trago Amargo Matienzo',
-        rows: 2,
         cols: 2,
     },
     {
@@ -34,17 +34,16 @@ export const itemData = [
         cols: 2,
     },
     {
+        img: trago7,
+        title: 'Luis Dollera',
+    },
+    {
         img: trago5,
-        title: 'Guitarra',
-        rows: 2,
-        cols: 2,
+        title: 'Trago Baile',
     },
     {
         img: trago1,
-        title: 'Trago Baile',
-    },
-    {
-        img: trago5,
-        title: 'Trago Baile',
+        title: 'Trago Todos',
+        cols: 2,
     },
 ];

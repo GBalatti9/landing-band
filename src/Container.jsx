@@ -1,6 +1,6 @@
 import { Header } from "./components/Header"
-import { ImageGallery } from "./components/ImageGallery"
 import { SpotifyComponent } from "./components/SpotifyComponent"
+import { ThirdSection } from "./components/ThirdSection"
 
 
 export const Container = () => {
@@ -8,7 +8,7 @@ export const Container = () => {
         <>
             <Header />
             <SpotifyComponent />
-            <ImageGallery />
+            <ThirdSection />
         </>
     )
 }
