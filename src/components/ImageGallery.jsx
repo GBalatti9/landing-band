@@ -45,8 +45,7 @@ export const ImageGallery = () => {
                 ))}
             </ImageList>
 
-            <Dialog open={ openDialog } onClose={ handleCloseDialog } >
-                <DialogTitle>  </DialogTitle>
+            <Dialog open={ openDialog } onClose={ handleCloseDialog } className='dialog-container' >
                 <DialogContent className='dialog'>
                     {
                         selectedImage && (
