@@ -30,8 +30,8 @@ export const ImageGallery = () => {
             <ImageList
                 className='image-list'
                 variant="quilted"
-                cols={4}
-                rowHeight={121}
+                cols={3}
+                // rowHeight={200}
             >
                 {itemData.map((item) => (
                     <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>

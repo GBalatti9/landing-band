@@ -1,9 +1,27 @@
+/* .info-container{
+    border: 1px solid red;
+} */
+
 h3{
     color: white;
     text-align: center;
 }
 
-span{
+p{
     color: white;
     font-family: 'Roboto';
+    text-align: justify;
+    padding: 10px 0;
+}
+
+@media screen and (min-width: 1024px) {
+
+    p{
+        font-size: 20px;
+    }
+
+    .info-container{
+        width: 40%;
+        padding: 40px;
+    }
 }

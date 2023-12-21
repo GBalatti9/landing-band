@@ -1,8 +1,6 @@
-.image-gallery-component-gallery{
-    background-color: black;
+/* .image-gallery-component-gallery{
     padding: 20px;
-    border: 1px solid red;
-}
+} */
 
 .image-list{
     width: 100%;
@@ -10,9 +8,10 @@
     margin: auto;
     height: 100%;
     overflow: hidden;
-    border: 1px solid red;
     border-radius: 12px;
 }
+
+
 
 li > img{
     width: 100%;
@@ -27,7 +26,6 @@ li > img{
 
 @media screen and (min-width: 480px) {
     .image-list{
-        border: 1px solid red;
-        height: 350px;
+        height: 500px;
     }
 }
