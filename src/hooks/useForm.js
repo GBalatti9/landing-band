@@ -6,7 +6,6 @@ const initialState = {
     message: '',
 }
 
-
 export const useForm = () => {
 
     const [ state, setState ] = useState( initialState );
