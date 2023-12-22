@@ -6,7 +6,7 @@ export const Contact = () => {
         <div style={{ backgroundColor: 'black' }}>
             <Typography variant='h3' id="contacto">Contacto</Typography>
             <form action="/" method="post" className='form-container'>
-                <Box sx={{ display: 'flex', flexDirection: 'column', borderRadius: '5px', backgroundColor: 'rgba(255, 255, 255)', padding: '10px'}}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', borderRadius: '5px', padding: '10px',backgroundColor: 'rgba(255, 255, 255)'}}>
                     <TextField
                         label="Nombre"
                         variant="outlined"
@@ -31,7 +31,7 @@ export const Contact = () => {
                         required
                         sx={{ backgroundColor: 'white', borderRadius: '12px' }}
                         />
-                    <Button type="submit" variant="contained" color="primary" sx={{ marginTop: '16px' }}>
+                    <Button type="submit" variant="contained" color="primary" sx={{ width: '50%', margin: '10px auto' }}>
                         Enviar
                     </Button>
                 </Box>

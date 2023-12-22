@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './NavBar.css';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const NavBar = () => {
 
@@ -10,6 +10,28 @@ export const NavBar = () => {
     const handleMenuMobile = () => {
         setOpen(!open);
     };
+
+    const handleCloseMenu = () => {
+        setOpen(false);
+    };
+
+    const handleScroll = () => {
+        const usSectionPosition = document.getElementById('nosotros')?.offsetTop; 
+        const contactSectionPosition = document.getElementById('contacto')?.offsetTop;
+        const currentScrollPosition = window.scrollY;
+
+        if (currentScrollPosition >= usSectionPosition && currentScrollPosition < contactSectionPosition) {
+            handleCloseMenu();
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <>
@@ -22,9 +44,9 @@ export const NavBar = () => {
             </div>
             <div className={`menu-mobile ${open ? 'active' : 'md-lg'}`}>
                 <ul className='list-menu-mobile'>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#nosotros" onClick={ handleScroll }>Nosotros</a></li>
+                    <li><a href="#contacto" onClick={ handleScroll }>Contacto</a></li>
                 </ul>
             </div>
             <ul className='list-menu'>
