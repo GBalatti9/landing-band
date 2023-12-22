@@ -4,7 +4,7 @@ import { ImageGallery } from './ImageGallery';
 
 export const ThirdSection = () => {
     return (
-        <div className='third-section-container'>
+        <div className='third-section-container' id='nosotros'>
             <Info />
             <ImageGallery />
         </div>

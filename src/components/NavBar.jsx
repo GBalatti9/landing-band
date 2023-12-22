@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export const NavBar = () => {
 
-    const [open, setOpen] = useState(false);
+    const [ open, setOpen ] = useState(false);
 
     const handleMenuMobile = () => {
         setOpen(!open);
@@ -22,15 +22,15 @@ export const NavBar = () => {
             </div>
             <div className={`menu-mobile ${open ? 'active' : 'md-lg'}`}>
                 <ul className='list-menu-mobile'>
-                    <li>Home</li>
-                    <li>About us</li>
-                    <li>Contact</li>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
             <ul className='list-menu'>
-                    <li>Home</li>
-                    <li>About us</li>
-                    <li>Contact</li>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
         </>
     );
